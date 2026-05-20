@@ -1,54 +1,62 @@
 # EX1
-# Um aluno tem 10 anos. Armazene essa idade em uma variável
-# e exiba seu tipo.
-valor = 10
-print("aluno tem 10 anos", type (valor))
+# Calcule o total de alunos em duas turmas:
+# uma com 28 alunos e outra com 32.
+
+turma1 = 32
+turma2 = 28
+print("as duas turams juntas é", turma1 + turma2)
+''''''''''''''''''''''''''''''''''''''''''''
+
 # EX2
-# A temperatura medida é 23.5°C.
-# Armazene esse valor e mostre seu tipo.
-valor1= float= 23.5
-print ("A temperatira média é de:", valor1, type(valor1))
+# Um pacote de dados tem 500MB.
+# Após baixar 150MB, quanto resta?
+Pacote = 500 
+baixar = 150 
+print("após abaixar", Pacote - baixar, "MB isso sobrou")
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
 # EX3
-# Crie um número complexo representando uma impedância elétrica
-# de 5 + 8j e mostre sua parte real.
-numero_complexo = Z= 5 +8J
-print("parte real:",Z.real )
+# Uma caixa contém 24 ovos.
+# Quantos ovos existem em 8 caixas?
+caixa = 24
+print("em 8 caixas tem:", caixa * 8, "ovos")
+''''''''''''''''''''''''''''''''''''''''''
 # EX4
-# Mostre a parte imaginária do número complexo
-# criado no exercício anterior.
-numero_complexo = Z= 5 +8J
-print("parte imaginária:",Z.imag )
-
+# Divida 10 litros de suco igualmente
+# entre 3 pessoas e mostre o resultado.
+litros = 10
+pessoas = 3
+print ("dividindo dária:", litros / pessoas,)
+''''''''''''''''''''''''''''''''''''''''''''''''''
 # EX5
-# Declare uma variável chamada "populacao"
-# com o valor 8_000_000_000 (8 bilhões)
-# e mostre seu tipo.
-população = 8000000000
-print("tipo:", type (população))
-
+# Use divisão inteira para descobrir
+# quantas pessoas recebem 3 litros inteiros
+# dos 10 litros disponíveis.
+litros = 10
+pessoas = 3
+print ("dividindo dária:", litros // pessoas, "pra cada pessoa")
+''''''''''''''''''''''''''''''''''''''''''''
 # EX6
-# Verifique se o número 7 é do tipo int
-# usando a função type().
-valor = 7
-print("tipo:",type (valor))
+# Calcule o resto da divisão de 10 por 3.
+print ("resto da divisão", 10 % 3)
+''''''''''''''''''''''''''''''''''''''''''''''''
 # EX7
-# Crie uma variável chamada "aprovado"
-# com o valor booleano True e mostre seu tipo.
-aprovado = True
-print("tipo:", type(aprovado))
+# Calcule 2 elevado à potência 8.
+print ("2 elevado à potência 8 = ", 2 ** 8)
 # EX8
-# Some True e False e mostre o resultado
-# e também o tipo do resultado.
-soma = True + False
-print("resultado:", soma)
-print("Tipo:", type(soma))
+# Calcule a raiz quadrada de 81
+# usando exponenciação.
+valor = 81
+resultado = (81 ** (1/2))
+print ("resultado:", resultado)
+''''''''''''''''''''''''''''''''''''''''''''''''
 # EX9
-# Pesquise e mostre qual é o valor máximo
-# que um número inteiro pode ter em Python.
-import sys
-print(sys.maxsize)
-9223372036854775807
+# Calcule a expressão:
+# (10 + 5) * 2 - 8 / 4
+print ((10 + 5) * 2 - 8 / 4)
+''''''''''''''''''''''''''''''''''''''''''''''''
 # EX10
-# Representação binária do número 10
-binario = bin(10)
-print(binario)
+# Mostre o resultado da divisão de -7 por 2
+# usando divisão inteira e o operador de resto.
+print ("divisão = " , -7 // 2,)
+print ("resto = ", -7 % 2)
