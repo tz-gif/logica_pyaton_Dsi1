@@ -1,62 +1,79 @@
 # EX1
-# Calcule o total de alunos em duas turmas:
-# uma com 28 alunos e outra com 32.
-
-turma1 = 32
-turma2 = 28
-print("as duas turams juntas é", turma1 + turma2)
-''''''''''''''''''''''''''''''''''''''''''''
-
+# Use a função type() para verificar
+# o tipo da variável "ano" com valor 2024.
+ano = 2024
+print("tipo:", type (ano))
+''''''''''''''''''''''''''''''''''''''
 # EX2
-# Um pacote de dados tem 500MB.
-# Após baixar 150MB, quanto resta?
-Pacote = 500 
-baixar = 150 
-print("após abaixar", Pacote - baixar, "MB isso sobrou")
-''''''''''''''''''''''''''''''''''''''''''''''''''
+# Verifique se o número 3.14159
+# é do tipo float usando isinstance().
+numero = 3.14159
+print (isinstance(numero, float))
 
 # EX3
-# Uma caixa contém 24 ovos.
-# Quantos ovos existem em 8 caixas?
-caixa = 24
-print("em 8 caixas tem:", caixa * 8, "ovos")
-''''''''''''''''''''''''''''''''''''''''''
+# Compare se o tipo de 100
+# é igual ao tipo de True.
+
 # EX4
-# Divida 10 litros de suco igualmente
-# entre 3 pessoas e mostre o resultado.
-litros = 10
-pessoas = 3
-print ("dividindo dária:", litros / pessoas,)
-''''''''''''''''''''''''''''''''''''''''''''''''''
+# Use isinstance() para verificar
+# se True pode ser considerado int.
+resultado = isinstance (True, int)
+print (resultado)
+
+
 # EX5
-# Use divisão inteira para descobrir
-# quantas pessoas recebem 3 litros inteiros
-# dos 10 litros disponíveis.
-litros = 10
-pessoas = 3
-print ("dividindo dária:", litros // pessoas, "pra cada pessoa")
-''''''''''''''''''''''''''''''''''''''''''''
+# Verifique se o resultado de 5/2
+# é do tipo float usando type() e isinstance().
+resultado = 5/2
+print("resultado",(isinstance (resultado, float)))
+
+resultado = 5/2
+print("resultado:",type (resultado))
+
 # EX6
-# Calcule o resto da divisão de 10 por 3.
-print ("resto da divisão", 10 % 3)
-''''''''''''''''''''''''''''''''''''''''''''''''
+# Crie uma função que recebe um valor
+# e imprime "É número!" se for int, float ou complex.
+def verifica_numero(valor):
+
+    if verifica_numero(valor, (int, float, complex)):
+        print("Ex6: é número")
+    else: 
+        print( "Não é número.")
+              
+verifica_numero(42)
+verifica_numero("texto")
+
 # EX7
-# Calcule 2 elevado à potência 8.
-print ("2 elevado à potência 8 = ", 2 ** 8)
+# Compare type() e isinstance()
+# para verificar se um booleano
+# é considerado inteiro.
+resultado = isinstance(True, int)
+print(resultado)
+
 # EX8
-# Calcule a raiz quadrada de 81
-# usando exponenciação.
-valor = 81
-resultado = (81 ** (1/2))
-print ("resultado:", resultado)
-''''''''''''''''''''''''''''''''''''''''''''''''
+# Descubra o tipo do número 3+4j
+# usando type().
+numero_complexo = 3 + 4j
+print ("Valor:" , numero_complexo)
+print ("Tipo:" ,type (numero_complexo))
+
 # EX9
-# Calcule a expressão:
-# (10 + 5) * 2 - 8 / 4
-print ((10 + 5) * 2 - 8 / 4)
-''''''''''''''''''''''''''''''''''''''''''''''''
+# Verifique se o valor None
+# é do tipo NoneType usando isinstance().
+valor = None
+resultado = isinstance (None, type(None))
+print ("Tipo:", type (resultado))
+
+
 # EX10
-# Mostre o resultado da divisão de -7 por 2
-# usando divisão inteira e o operador de resto.
-print ("divisão = " , -7 // 2,)
-print ("resto = ", -7 % 2)
+# Verifique se o número 3.0
+# é int, float ou complex usando isinstance()
+# e depois teste especificamente se é int.
+num1 = 3.0
+resultado1 = isinstance(num1, int)
+resultado2 = isinstance(num1, float)
+resultado3 = isinstance(num1, complex)
+print (resultado1)
+print (resultado2)
+print (resultado3)
+print(isinstance(num1, int))
