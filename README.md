@@ -128,3 +128,54 @@ print(st[::2])
 
 print(st[::1])
 
+#-----------------
+# 5) operações com strings
+#-----------------
+#python permite varias operaçoes com o strings
+print("m" in st)
+#significa que a letra "m" existe dentro de strings
+print("x" not in st)
+#significa que "x" não existe  na strings
+print("m" * 20 )
+#multiplicar repete a strings
+print("m" + "maracana")
+#operador + concatena strings
+
+#----------------------
+# 6) strings são imutaveis
+#----------------------
+#strings não podem ser alterados diretamneta!!!
+#isso significa que o conteudo original não muda
+#o que acontece é a criação de uma nova strings
+
+texto = "python 3"
+#metodo replace cria uma strings
+texto = texto.replace("3", "2")
+print(texto)
+
+#---------------------
+# 7) metodos importantes
+#---------------------
+# strings possuem varios metodos uteis
+
+cidade = "maracana"
+#coloca a primeira linha maiusculo
+print(cidade.replace())
+
+#conta quantas vezes aquela letra
+print(cidade.count("a"))
+
+#verificar se começa com "m"
+print(cidade.startswith("m"))
+
+#verificar se termina com "z"
+print(cidade.endswith("z"))
+
+frase = "copa de 2022"
+
+# Divide a strinhgs em uma linha
+print(frase.split(" "))
+
+#--------------------------
+# 8) formato de strings
+#--------------------------
