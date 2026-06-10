@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ex1"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-10 11:48:18 "/>
+        <attribute name="created" value="QWx1bm87RFNOMTIyMTI3Mzg3NDsyMDI2LTA2LTEwOyIwODozOToyNSAiOzI0NTY="/>
+        <attribute name="edited" value="QWx1bm87RFNOMTIyMTI3Mzg3NDsyMDI2LTA2LTEwOyIxMTo0ODoxOCAiOzE7MjU2MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="destino" type="String" array="False" size=""/>
+            <declare name="peso" type="Real" array="False" size=""/>
+            <declare name="frete" type="Real" array="False" size=""/>
+            <declare name="frete2" type="Real" array="False" size=""/>
+            <declare name="frete3" type="Integer" array="False" size=""/>
+            <declare name="totalpeso" type="Real" array="False" size=""/>
+            <declare name="totalfrete" type="Real" array="False" size=""/>
+            <declare name="ticketmedio" type="Real" array="False" size=""/>
+            <declare name="categoria" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="peso" expression="10"/>
+            <assign variable="frete" expression="10"/>
+            <assign variable="frete2" expression="20"/>
+            <assign variable="frete3" expression="30"/>
+            <assign variable="totalpeso" expression="0"/>
+            <assign variable="totalfrete" expression="0"/>
+            <output expression="&quot;Digite o peso do pacote..&quot;" newline="True"/>
+            <input variable="peso"/>
+            <if expression="peso &gt;=1">
+                <then>
+                    <for variable="i" start="0" end="10" direction="inc" step="1">
+                        <output expression="&quot;Digite o peso do pacote novamente.. &quot;" newline="True"/>
+                        <input variable="peso"/>
+                        <output expression="&quot;Digite o destino(Nacional ou internacional)&quot;" newline="True"/>
+                        <input variable="destino"/>
+                        <if expression="destino = &quot;inter&quot;">
+                            <then>
+                                <output expression="&quot;Destino intrenacional..&quot;" newline="True"/>
+                                <if expression="peso &lt; 2">
+                                    <then>
+                                        <output expression="&quot;categoria: Leve &quot;" newline="True"/>
+                                        <output expression="&quot;seu frete seria de : &quot; &amp; frete * 1.20" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="peso &lt; 10">
+                                            <then>
+                                                <output expression="&quot;categoria padr&#227;o&quot;" newline="True"/>
+                                                <output expression="&quot;seu frete = 24&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;categoria: pesado&quot;" newline="True"/>
+                                                <output expression="&quot;seu frete = 36&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                        <output expression="&quot;categoria: padr&#227;o&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;Destino nacional..&quot;" newline="True"/>
+                                <if expression="peso &lt; 2">
+                                    <then>
+                                        <output expression="&quot;categoria: Leve &quot;" newline="True"/>
+                                        <output expression="&quot;seu frete seria de : &quot; &amp; frete" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="peso &lt; 10">
+                                            <then>
+                                                <output expression="&quot;categoria padr&#227;o&quot;" newline="True"/>
+                                                <output expression="&quot;seu frete seria de : &quot; &amp; frete2 * 1.20" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;categoria: pesado&quot;" newline="True"/>
+                                                <output expression="&quot;seu frete seria de : &quot; &amp; frete3 * 1.20" newline="True"/>
+                                            </else>
+                                        </if>
+                                        <output expression="&quot;categoria: padr&#227;o&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                        <assign variable="totalpeso" expression="totalpeso + peso"/>
+                        <assign variable="totalfrete" expression="totalfrete + frete"/>
+                    </for>
+                    <assign variable="ticketmedio" expression="totalfrete / 10"/>
+                    <output expression="&quot;///       ///&quot;" newline="True"/>
+                    <output expression="&quot;total peso: &quot; &amp; totalpeso" newline="True"/>
+                    <output expression="&quot;faturamento final: &quot; &amp; totalfrete" newline="True"/>
+                    <output expression="&quot;ticket m&#233;dio: &quot; &amp; ticketmedio" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Digite o peso do seu pacote..&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
